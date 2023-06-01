@@ -98,12 +98,24 @@ class MessageWidget {
 			</div>
 		</div>
 		<div class="bg"></div>
-		
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
-	<script src="https://wmuza.github.io/SocketIO-Chat-App/public/js/index.js"></script> 
     `;
+// Create and append the script elements
+  const jqueryScript = document.createElement("script");
+  jqueryScript.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js";
+
+  const mCustomScrollbarScript = document.createElement("script");
+  mCustomScrollbarScript.src = "https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js";
+
+  const socketIOScript = document.createElement("script");
+  socketIOScript.src = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js";
+
+  const chatAppScript = document.createElement("script");
+  chatAppScript.src = "https://wmuza.github.io/SocketIO-Chat-App/public/js/index.js";
+
+  document.body.appendChild(jqueryScript);
+  document.body.appendChild(mCustomScrollbarScript);
+  document.body.appendChild(socketIOScript);
+  document.body.appendChild(chatAppScript);
   }
 
   injectStyles() {
